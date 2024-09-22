@@ -17,7 +17,7 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-J
    Use `console.log` each time to display the return value of the
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
-export function giveCompliment(/* TODO parameter(s) go here */) {
+export function giveCompliment( name /* TODO parameter(s) go here */) {
   // TODO complete this function
 }
 
