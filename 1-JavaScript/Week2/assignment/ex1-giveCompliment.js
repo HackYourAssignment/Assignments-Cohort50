@@ -16,6 +16,11 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-J
    your name.
    Use `console.log` each time to display the return value of the
    `giveCompliment` function to the console.
+
+
+
+   
+   // try to add coment
 -----------------------------------------------------------------------------*/
 export function giveCompliment( name ) {
   // TODO complete this function
