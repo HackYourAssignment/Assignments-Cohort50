@@ -50,19 +50,13 @@ function selectRandomly(array) {
  }
  
  function main() {
-   const numKids = [
-     2, 3, 1, 4, 5  ];
+   const numKids = [ 2, 3, 1, 4, 5  ];
  
-   const partnerNames = [
-    "Alice", "John", "Emily", "David", "Samantha"
-   ];
+   const partnerNames = ["Alice", "John", "Emily", "David", "Samantha"];
  
-   const locations = [
-     "New York", "Paris", "Tokyo", "Sydney", "Toronto"
-   ];
+   const locations = ["New York", "Paris", "Tokyo", "Sydney", "Toronto"];
  
-   const jobTitles = [
- "Engineer", "Doctor", "Artist", "Teacher", "Chef"  ];
+   const jobTitles = ["Engineer", "Doctor", "Artist", "Teacher", "Chef"];
  const arrays = [numKids, partnerNames, locations, jobTitles];
  for(let i = 0; i < 3; i++){
    console.log(tellFortune(numKids, partnerNames, locations, jobTitles));

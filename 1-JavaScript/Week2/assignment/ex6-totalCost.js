@@ -33,18 +33,18 @@ function calculateTotalPrice(cartForParty) {
   }
   return `Total: €${total} `;
 
-  // TODO replace this comment with your code
 }
 
 // ! Test functions (plain vanilla JavaScript)
+
 function test1() {
+  console.log('\nTest 1: calculateTotalPrice should take one parameter');
   console.log(`\n ${calculateTotalPrice(cartForParty)}`);
-  // TODO replace this comment with your code
 }
 
 function test2() {
+  console.log('\nTest 2: return correct output when passed cartForParty');
   console.log(`\n ${calculateTotalPrice(cartForParty)}`);
-  // TODO replace this comment with your code
 }
 
 function test() {
