@@ -26,7 +26,8 @@ function addToShoppingCart(groceryItem) {
 
 
   if (groceryItem === undefined) {
-    return `You bought ${shoppingCart.join(', ')}!`;}
+    return `You bought ${shoppingCart.join(', ')}!`;
+  }
 
   shoppingCart.push(groceryItem);
 
