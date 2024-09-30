@@ -10,7 +10,7 @@ function calculateTotalPrice(cartForParty) {
   for (let key in cartForParty) {
     amount += cartForParty[key];
   }
-  return `Total: €${amount}`;
+  return `Total: €${amount.toFixed(2)}`;
 }
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

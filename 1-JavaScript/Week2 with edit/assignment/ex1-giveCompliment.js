@@ -25,8 +25,8 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-J
 export function giveCompliment( name ) {
   // TODO complete this function
 const compliments = [
-  'good     ', 'verygood ', 'excelent ', 'great    ', 'awesome  ', 
-  'fantastic', 'wonderful', 'amazing  ', 'cool     '];
+  'good', 'verygood', 'excelent', 'great', 'awesome', 
+  'fantastic', 'wonderful', 'amazing', 'cool'];
   const randomCompliment = Math.floor(Math.random() * compliments.length);
   const compliment = compliments[randomCompliment];
   return ` ${compliment}, ${name} :)`;
