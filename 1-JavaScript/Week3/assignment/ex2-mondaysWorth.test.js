@@ -30,8 +30,12 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function computeEarnings(mondayTasks, hourlyRate) {
+  const duration = mondayTasks.map(
+    (element) => (element.duration / 60) * hourlyRate
+  );
+  const result = duration.reduce((acc, ind) => acc + ind);
+  return `€${result.toFixed(2)}`;
 }
 
 // ! Unit tests (using Jest)
