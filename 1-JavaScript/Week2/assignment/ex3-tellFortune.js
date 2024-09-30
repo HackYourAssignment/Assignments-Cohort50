@@ -50,7 +50,7 @@ function selectRandomly(array) {
  }
  
  function main() {
-   const numKids = [ 2, 3, 1, 4, 5  ];
+   const numKids = [2, 3, 1, 4, 5];
  
    const partnerNames = ["Alice", "John", "Emily", "David", "Samantha"];
  

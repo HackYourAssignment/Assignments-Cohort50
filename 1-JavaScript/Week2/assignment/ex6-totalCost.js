@@ -38,14 +38,15 @@ function calculateTotalPrice(cartForParty) {
 // ! Test functions (plain vanilla JavaScript)
 
 function test1() {
-  console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  console.log(`\n ${calculateTotalPrice(cartForParty)}`);
+  console.assert(calculateTotalPrice.length === 1, 'Test 1 Failed: Function should take one parameter');
 }
 
 function test2() {
-  console.log('\nTest 2: return correct output when passed cartForParty');
-  console.log(`\n ${calculateTotalPrice(cartForParty)}`);
+  console.assert(calculateTotalPrice(cartForParty) === 'Total: €30.21', 'Test 2 Failed: Function did not return correct output when passed cartForParty');
 }
+
+
+
 
 function test() {
   test1();
