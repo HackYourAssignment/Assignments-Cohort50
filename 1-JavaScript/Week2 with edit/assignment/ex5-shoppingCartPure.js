@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-JavaScript/Week3#exercise-5-improved-shopping-at-the-supermarket
 
-In the current exercise we will rewrite the `addToShoppingCart` function to make 
+In the current exercise we will rewrite the addToShoppingCart function to make 
 it pure. Do the following:
 
-1. Complete the parameter list of `addToShopping()`. As a first parameter it 
+1. Complete the parameter list of addToShopping(). As a first parameter it 
    should accept a shopping cart array and as a second parameter it should 
    accept a grocery item to be added.
 2. The function should return a new shopping cart array, following the same rule 
@@ -15,8 +15,12 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function addToShoppingCart(shoppingCart, groceryItem) {
+  const updatedCart = [...shoppingCart, groceryItem];
+  if(updatedCart.length>3){
+    return updatedCart.slice(1);
+  }
+  return updatedCart;
 }
 
 // ! Test functions (plain vanilla JavaScript)
@@ -39,7 +43,7 @@ function test2() {
 }
 
 function test3() {
-  console.log('Test 3: `chocolate` should be added');
+  console.log('Test 3: chocolate should be added');
   const initialCart = ['bananas', 'milk'];
   const result = addToShoppingCart(initialCart, 'chocolate');
   console.assert(result.length === 3);
@@ -47,7 +51,7 @@ function test3() {
 }
 
 function test4() {
-  console.log('Test 4: `waffles` should be added');
+  console.log('Test 4: waffles should be added');
   const initialCart = ['bananas', 'milk', 'chocolate'];
   const result = addToShoppingCart(initialCart, 'waffles');
   console.assert(result.length === 3);
