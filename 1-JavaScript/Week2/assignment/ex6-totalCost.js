@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-JavaScript/Week3#exercise-6-total-cost-is
 
 You want to buy a couple of things from the supermarket to prepare for a party.
@@ -20,23 +20,33 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  // TODO complete this object
+  chess: 10.99,
+  chips: 3.49,
+  soda: 4.99,
+  pizza: 8.99,
+  cookies: 2.75,
 };
+function calculateTotalPrice(cartForParty) {
+  let total = 0;
+  for (let price in cartForParty) {
+    total = total + cartForParty[price];
+  }
+  return `Total: €${total} `;
 
-function calculateTotalPrice(/* TODO parameter(s) go here */) {
-  // TODO replace this comment with your code
 }
 
 // ! Test functions (plain vanilla JavaScript)
+
 function test1() {
-  console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
+  console.assert(calculateTotalPrice.length === 1, 'Test 1 Failed: Function should take one parameter');
 }
 
 function test2() {
-  console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
+  console.assert(calculateTotalPrice(cartForParty) === 'Total: €30.21', 'Test 2 Failed: Function did not return correct output when passed cartForParty');
 }
+
+
+
 
 function test() {
   test1();
