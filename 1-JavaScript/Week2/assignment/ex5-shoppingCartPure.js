@@ -15,18 +15,24 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function addToShoppingCart(shoppingCart, groceryItem) {
+  const newShoppingCart = [...shoppingCart, groceryItem];
+
+  if (newShoppingCart.length > 3) {
+    return newShoppingCart.slice(-3);
+  }
+  return newShoppingCart;
 }
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
-  console.log('Test 1: addToShoppingCart should take two parameters');
+ // Test 1: addToShoppingCart should take two parameters
   console.assert(addToShoppingCart.length === 2);
 }
 
 function test2() {
-  console.log('Test 2: addToShoppingCart should be a pure function');
+ // Test 2: addToShoppingCart should be a pure function
+
   // A pure function should return the same result when called with
   // identical arguments. It should also have no side effects (not tested here).
   const initialCart = ['bananas', 'milk'];
@@ -39,7 +45,7 @@ function test2() {
 }
 
 function test3() {
-  console.log('Test 3: `chocolate` should be added');
+// Test 3: `chocolate` should be added
   const initialCart = ['bananas', 'milk'];
   const result = addToShoppingCart(initialCart, 'chocolate');
   console.assert(result.length === 3);
@@ -47,7 +53,7 @@ function test3() {
 }
 
 function test4() {
-  console.log('Test 4: `waffles` should be added');
+// Test 4: `waffles` should be added
   const initialCart = ['bananas', 'milk', 'chocolate'];
   const result = addToShoppingCart(initialCart, 'waffles');
   console.assert(result.length === 3);
